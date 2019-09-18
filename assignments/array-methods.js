@@ -105,7 +105,41 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The director needs everyone's emails in alphabetical order.
+
+let emailArray = runners.map(function (element) {
+    return element.email;
+}).sort();
+
+console.log(emailArray);
+
 
 // Problem 2
+// The director needs the information of everyone from Skinix;
+
+let skinixFolks = [];
+
+skinixFolks = runners.filter(function (element) {
+    return element.company_name === "Skinix";
+})
+
+
+console.log(skinixFolks);
+
 
 // Problem 3
+// The director needs a list of donations in descending order.
+
+let donationsList=[];
+
+runners.forEach(function (element) {
+    return donationsList.push(element.donation);
+
+})
+
+donationsList.sort(function (a, b){
+       return b-a;
+        }
+       )
+
+console.log(donationsList);
